@@ -25,6 +25,12 @@ public class BookController {
         return bookRepository.findAll(Sort.by(Sort.Direction.ASC, "title"));
     }
 
+    @GetMapping("{title}")
+    public List<Book> getBookByTitle(@PathVariable String title){
+        return bookRepository.findByTitleContaining(title);
+
+    }
+
     @PutMapping("update")
     public void updateBook(@RequestBody Book book) {
         bookRepository.save(book);

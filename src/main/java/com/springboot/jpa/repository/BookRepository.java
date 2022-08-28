@@ -13,6 +13,7 @@ import com.springboot.jpa.domain.Book;
 //Fill your code here
 @Repository("bookRepository")
 public interface BookRepository extends JpaRepository<Book, Long> {
+    List<Book> findByTitleContaining(String title);
 
 
 }
