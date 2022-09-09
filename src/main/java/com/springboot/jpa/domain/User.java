@@ -14,6 +14,28 @@ public class User {
     @Column(name = "USER_PASSWORD")
     private String password;
 
+    @Column(name = "USER_FIRSTNAME")
+    private String firstname;
+
+    @Column(name = "USER_LASTNAME")
+    private String lastname;
+
+    public String getFirstname() {
+        return firstname;
+    }
+
+    public void setFirstname(String firstname) {
+        this.firstname = firstname;
+    }
+
+    public String getLastname() {
+        return lastname;
+    }
+
+    public void setLastname(String lastname) {
+        this.lastname = lastname;
+    }
+
     public Long getUserId() {
         return userId;
     }
