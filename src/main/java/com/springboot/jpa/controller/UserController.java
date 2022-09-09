@@ -35,5 +35,11 @@ public class UserController {
 
         return null;
     }
+    @PostMapping("/login/create")
+    public void createUser(@RequestBody User user){
+        userRepository.save(user);
+
+    }
+
 
 }
