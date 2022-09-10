@@ -22,6 +22,7 @@ public class UserController {
         return userRepository.findAll();
 
     }
+
     @PostMapping("/login")
     public User login(@RequestBody User user){
         Optional<User> userResult = userRepository.findByEmail(user.getEmail());
